@@ -1,0 +1,187 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+/* 全体：スマホサイズを意識した薄い橙色背景 */
+.app {
+  background-color: #fff4e6; /* 落ち着いた薄い橙色 */
+  min-height: 100vh;
+  max-width: 480px;
+  margin: 0 auto;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/* 上の白いバナー */
+.header {
+  background: #ffffff;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+/* 左側のタイトル部分 */
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d65f2a; /* 濃い橙色 */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ハートアイコンの丸背景 */
+.icon-heart {
+  width: 32px;
+  height: 32px;
+  background: #ffe2c6; /* 薄い橙色 */
+  color: #d65f2a; /* 濃い橙色 */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+/* 灰色の注意書き */
+.subtitle {
+  font-size: 10px;
+  color: #777;
+  margin-top: 2px;
+}
+
+/* 右側のアイコンボタン */
+.icon-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #d65f2a;
+  cursor: pointer;
+}
+
+/* モーダル（詳細画面） */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 12px;
+  line-height: 1.6;
+}
+
+.close-button {
+  margin-top: 16px;
+  padding: 8px 16px;
+  background: #d65f2a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.messages {
+  width: 100%;
+  max-width: 420px; /* ← スマホ幅に合わせて広げる */
+  margin: 0 auto;
+  padding: 0 12px; /* ← 余白をつけると綺麗 */
+}
+/* ヘッダーの下に固定されるメインボタン */
+.main-buttons {
+  position: sticky;
+  top: 60px; /* ← ヘッダーの高さに合わせる（必要なら調整） */
+  z-index: 150;
+  background: #fff4e6;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* ← 田の形（2×2） */
+  gap: 8px;
+  border-bottom: 1px solid #e0c8b0;
+}
+
+/* 細長い横長ボタン */
+.main-buttons button {
+  background: #ffe7d3;
+  border: 1px solid #f2c7a8;
+  border-radius: 10px;
+  padding: 12px 10px;
+  font-size: 14px;
+  color: #d65f2a;
+  text-align: center;
+  width: 100%;
+  height: auto; /* ← 細長くする */
+  white-space: nowrap; /* ← 文字が折れないように */
+}

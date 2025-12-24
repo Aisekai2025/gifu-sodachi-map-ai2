@@ -1,6 +1,8 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+console.log("API_KEY in production:", API_KEY); // ← 追加
+
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 export async function generateGeminiResponse(userMessage) {
